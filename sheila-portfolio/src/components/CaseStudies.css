@@ -1,0 +1,123 @@
+.case-studies {
+  background: var(--cream);
+}
+
+.cs-intro {
+  font-size: 1rem;
+  color: var(--mid-gray);
+  max-width: 580px;
+  line-height: 1.8;
+  margin-bottom: 56px;
+  margin-top: -32px;
+}
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.cs-card {
+  background: var(--card-bg, #F5F5F5);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 24px;
+  padding: 36px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: default;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cs-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(28,28,28,0.1);
+}
+
+.cs-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cs-icon {
+  display: flex;
+}
+
+.cs-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+  border: 1px solid currentColor;
+}
+
+.cs-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--mid-gray);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cs-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+
+.cs-desc {
+  font-size: 0.9rem;
+  color: var(--mid-gray);
+  line-height: 1.75;
+  flex: 1;
+}
+
+.cs-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+
+.cs-coming {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--card-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cs-arrow {
+  font-size: 1.1rem;
+  color: var(--card-accent);
+  transition: transform 0.2s;
+}
+
+.cs-card:hover .cs-arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 640px) {
+  .cs-grid {
+    grid-template-columns: 1fr;
+  }
+}
