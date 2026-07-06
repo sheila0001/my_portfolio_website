@@ -5,12 +5,13 @@ const cases = [
   {
     id: 1,
     label: 'Design 1 — Service Site',
-    title: 'Local Service Website',
+    title: 'Lumiere Hair Studio',
     description:
-      'A clean, approachable website for a local service provider. Focused on trust, clarity, and easy booking.',
+      'A clean, approachable website for a premium hair salon in Ottawa. Focused on trust, clarity, and easy appointment booking.',
     tag: 'Service Design',
     color: '#E8F0E8',
     accent: '#7A9E7E',
+    link: 'https://sheila0001.github.io/lumiere-salon',
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
         <rect x="6" y="14" width="28" height="20" rx="3" />
@@ -22,12 +23,13 @@ const cases = [
   {
     id: 2,
     label: 'Design 2 — Memory Game',
-    title: 'Jeu de Memoire',
+    title: 'Flora Memory',
     description:
-      'An interactive memory card game with a fun, engaging UI. The challenge here is creating a delightful experience that keeps users coming back.',
+      'A botanical card-matching memory game with theme selection, difficulty levels, and a 3-star rating system. Built to challenge and delight.',
     tag: 'Interactive Design',
     color: '#EDE8F5',
     accent: '#8B6FBF',
+    link: 'https://sheila0001.github.io/flora-memory',
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
         <rect x="4" y="10" width="14" height="20" rx="3" />
@@ -39,12 +41,13 @@ const cases = [
   {
     id: 3,
     label: 'Design 3 — E-Commerce',
-    title: 'E-Commerce Platform',
+    title: 'Noire & Co.',
     description:
-      'An online shopping experience that balances product discovery with a smooth checkout flow. Accessibility and visual hierarchy are central to this design.',
+      'A premium skincare e-commerce store for melanin-rich skin. Features a faceted product search, a full checkout flow, and a post-purchase feedback survey.',
     tag: 'E-Commerce Design',
     color: '#FDF0E8',
     accent: '#C4614A',
+    link: 'https://sheila0001.github.io/noire-co',
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
         <path d="M6 8h4l4 16h16" />
@@ -63,6 +66,7 @@ const cases = [
     tag: 'Data Visualization',
     color: '#E8F0F8',
     accent: '#3A6EA8',
+    link: null,
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
         <rect x="5" y="24" width="6" height="10" rx="1" />
@@ -124,9 +128,9 @@ export default function CaseStudies() {
               <p className="cs-desc">{c.description}</p>
 
               <div className="cs-footer">
-                {c.id === 1 ? (
+                {c.link ? (
                   <a
-                    href="https://sheila0001.github.io/lumiere-salon"
+                    href={c.link}
                     target="_blank"
                     rel="noreferrer"
                     className="cs-live-link"
