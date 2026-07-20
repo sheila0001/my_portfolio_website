@@ -6,75 +6,45 @@ const cases = [
     id: 1,
     label: 'Design 1 — Service Site',
     title: 'Lumiere Hair Studio',
-    description:
-      'A clean, approachable website for a premium hair salon in Ottawa. Focused on trust, clarity, and easy appointment booking.',
+    description: 'A premium hair salon site for Ottawa with appointment booking, service browsing, and a clean accessible design.',
     tag: 'Service Design',
     color: '#E8F0E8',
     accent: '#7A9E7E',
     link: 'https://sheila0001.github.io/lumiere-salon',
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
-        <rect x="6" y="14" width="28" height="20" rx="3" />
-        <path d="M14 14V10a6 6 0 0112 0v4" />
-        <circle cx="20" cy="24" r="3" />
-      </svg>
-    ),
+    icon: (<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40"><rect x="6" y="14" width="28" height="20" rx="3" /><path d="M14 14V10a6 6 0 0112 0v4" /><circle cx="20" cy="24" r="3" /></svg>),
   },
   {
     id: 2,
     label: 'Design 2 — Memory Game',
     title: 'Flora Memory',
-    description:
-      'A botanical card-matching memory game with theme selection, difficulty levels, and a 3-star rating system. Built to challenge and delight.',
+    description: 'A botanical card-matching memory game with theme selection, three difficulty levels, and a star-based performance rating.',
     tag: 'Interactive Design',
     color: '#EDE8F5',
     accent: '#8B6FBF',
     link: 'https://sheila0001.github.io/flora-memory',
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
-        <rect x="4" y="10" width="14" height="20" rx="3" />
-        <rect x="22" y="10" width="14" height="20" rx="3" />
-        <path d="M11 20h18" strokeDasharray="2 3" />
-      </svg>
-    ),
+    icon: (<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40"><rect x="4" y="10" width="14" height="20" rx="3" /><rect x="22" y="10" width="14" height="20" rx="3" /><path d="M11 20h18" strokeDasharray="2 3" /></svg>),
   },
   {
     id: 3,
     label: 'Design 3 — E-Commerce',
     title: 'Noire & Co.',
-    description:
-      'A premium skincare e-commerce store for melanin-rich skin. Features a faceted product search, a full checkout flow, and a post-purchase feedback survey.',
+    description: 'A premium skincare e-commerce store for melanin-rich skin, featuring faceted product search, a full checkout flow, and a post-purchase feedback survey.',
     tag: 'E-Commerce Design',
     color: '#FDF0E8',
     accent: '#C4614A',
     link: 'https://sheila0001.github.io/noire-co',
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
-        <path d="M6 8h4l4 16h16" />
-        <circle cx="18" cy="30" r="2" />
-        <circle cx="28" cy="30" r="2" />
-        <path d="M10 12h24l-3 12H13L10 12z" />
-      </svg>
-    ),
+    icon: (<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40"><path d="M6 8h4l4 16h16" /><circle cx="18" cy="30" r="2" /><circle cx="28" cy="30" r="2" /><path d="M10 12h24l-3 12H13L10 12z" /></svg>),
   },
   {
     id: 4,
-    label: 'Design 4 — Analytics',
-    title: 'Analytics Dashboard',
-    description:
-      'A data-rich dashboard for visualizing sport or business intelligence data. The goal is turning complex datasets into clear, actionable insights.',
+    label: 'Design 4 — Analytics Dashboard',
+    title: 'UniStats Canada',
+    description: 'A bilingual interactive dashboard visualizing Ontario university enrolment data, with a bar chart, a line chart, regional filters, and full English/French localization.',
     tag: 'Data Visualization',
     color: '#E8F0F8',
     accent: '#3A6EA8',
-    link: null,
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40">
-        <rect x="5" y="24" width="6" height="10" rx="1" />
-        <rect x="17" y="16" width="6" height="18" rx="1" />
-        <rect x="29" y="8" width="6" height="26" rx="1" />
-        <path d="M5 18l12-8 12 6" />
-      </svg>
-    ),
+    link: 'https://sheila0001.github.io/uni-dashboard',
+    icon: (<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.6" width="40" height="40"><rect x="5" y="24" width="6" height="10" rx="1" /><rect x="17" y="16" width="6" height="18" rx="1" /><rect x="29" y="8" width="6" height="26" rx="1" /><path d="M5 18l12-8 12 6" /></svg>),
   },
 ];
 
@@ -104,9 +74,8 @@ export default function CaseStudies() {
         <p className="section-label fade-in">03 — Work</p>
         <h2 className="section-title fade-in">Case Studies</h2>
         <p className="cs-intro fade-in">
-          Four design projects I am building as part of my UI Design course. Each one
-          is an opportunity to apply user-centered design principles to a real-world
-          problem. Click any card to see where the project stands.
+          Four design projects built as part of my UI Design course at the University of Ottawa.
+          Each one applies a different set of user-centered design principles to a real-world problem.
         </p>
 
         <div className="cs-grid">
@@ -118,24 +87,14 @@ export default function CaseStudies() {
             >
               <div className="cs-card-top">
                 <div className="cs-icon" style={{ color: c.accent }}>{c.icon}</div>
-                <span className="cs-tag" style={{ color: c.accent, background: c.color }}>
-                  {c.tag}
-                </span>
+                <span className="cs-tag" style={{ color: c.accent, background: c.color }}>{c.tag}</span>
               </div>
-
               <p className="cs-label">{c.label}</p>
               <h3 className="cs-title">{c.title}</h3>
               <p className="cs-desc">{c.description}</p>
-
               <div className="cs-footer">
                 {c.link ? (
-                  <a
-                    href={c.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="cs-live-link"
-                    style={{ color: c.accent }}
-                  >
+                  <a href={c.link} target="_blank" rel="noreferrer" className="cs-live-link" style={{ color: c.accent }}>
                     View Project
                   </a>
                 ) : (
